@@ -1,6 +1,5 @@
 # poor's-man-ip-kvm
-
-![](.poors-man-ip-kvm.gif)
+![](http://hradec.com/images/poors-man-ip-kvm.gif)
 
 It's just ridiculous the price for an IP KVM solution. I simply can't get accept that! 
 
