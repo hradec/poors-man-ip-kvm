@@ -26,9 +26,14 @@ ___
   contains 2 arduino sketches: 
   
     - MultiSerial:
-        This goes into the arduino that will be connect to the bridge computer. It will receive characters from the remote machine via a serial connection to /dev/ttyACM0 (one can use `screen` or even the arduino ide serial monitor)
+        This goes into the arduino that will be connect to the bridge computer. 
+        It will receive characters from the remote machine via a serial connection 
+        to /dev/ttyACM0 (one can use `screen` or even the arduino ide serial monitor)
         
     - KeyboardAndMouseControl:
-        This goes into the arduino connected to the remote computer we want to control. This sketch receives the characters from the other arduino, and stream then as keyboard keystrokes to the controlled computer. The controlled computer actually "thinks" it's a real keyboard!
+        This goes into the arduino connected to the remote computer we want to control. 
+        This sketch receives the characters from the other arduino, and stream then as
+        keyboard keystrokes to the controlled computer. 
+        The controlled computer actually "thinks" it's a real keyboard!
         
         
