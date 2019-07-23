@@ -1,5 +1,6 @@
 # poor's-man-ip-kvm
-![](arduino/.poors-man-ip-kvm.mp4)
+
+[![Watch the video](https://i9.ytimg.com/vi/kl3uO3cDpzk/sddefault.jpg?sqp=COyO2ukF&rs=AOn4CLDm5XnbSou1VJ50FWhUAOMNu2Blrg&time=1563854784781)](https://www.youtube.com/watch?v=kl3uO3cDpzk)
 
 It's just ridiculous the price for an IP KVM solution. I simply can't get accept that! 
 
