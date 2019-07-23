@@ -1,5 +1,5 @@
 # poor's-man-ip-kvm
-![](http://hradec.com/images/poors-man-ip-kvm.gif)
+![](arduino/.poors-man-ip-kvm.mp4)
 
 It's just ridiculous the price for an IP KVM solution. I simply can't get accept that! 
 
