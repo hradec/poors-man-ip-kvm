@@ -1,4 +1,4 @@
-# poors-man-ip-kvm
+# poor's-man-ip-kvm
 
 ![](.poors-man-ip-kvm.gif)
 
