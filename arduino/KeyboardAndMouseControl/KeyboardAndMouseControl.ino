@@ -70,30 +70,9 @@ void loop() {
   // use serial input to control the mouse:
   if (Serial1.available() > 0) {
     int inChar = Serial1.read();
-/*
-    if( inChar == 0x1B ){
-      Serial1.write("flag1\n\r");
-      flag1=0x1B;
-    }else if ( flag3 != 0 && flag3 < 0x41 ){
-        flag4 = inChar;
-        Serial1.write("flag4 ");
-        Serial1.write( flag4 );
-        Serial1.write("\n\r");
-        if(flag4!=0x7E)
-          flag1=flag2=flag3=flag4=0;
-    }else if( flag2 != 0 ){
-      Serial1.write("flag3\n\r");
-      flag3=inChar;
-      if ( flag3 >= 0x41 )
-          flag4 = 0x7E;
-    }else if( flag1 != 0 ){
-      Serial1.write("flag1\n\r");
-      flag2=inChar;
-      buf[cbuf++] = inChar;
-    }
-*/
+
     // ====================================================================
-    // detect special keys
+    // detect escape sequence
     // ====================================================================
     Serial1.print(inChar, HEX);
     Serial1.write("\n\r" );
@@ -126,6 +105,16 @@ void loop() {
         for(x=0;x<10;x++) buf[x]=0;cbuf=0;
     }else
 
+    // ====================================================================
+    // power on via keyboard - crtl+alt+p 
+    // ====================================================================
+    if ( buf[0] == 0x1B && buf[1] == 0x10  ){
+      Serial1.write("crtl+alt+p = power on\n\r");
+        Keyboard.write(CONSUMER_POWER);
+        Keyboard.write(KEY_POWER);
+        Keyboard.wakeupHost();
+        for(x=0;x<10;x++) buf[x]=0;cbuf=0;
+    }else
         
     // ====================================================================
     // We try to detect if this is the end of the escape sequence
