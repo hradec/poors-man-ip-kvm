@@ -1,5 +1,7 @@
 # poors-man-ip-kvm
 
+![](.poors-man-ip-kvm.gif)
+
 It's just ridiculous the price for an IP KVM solution. I simply can't get accept that! 
 
 So, this is a "poor's man" IP KVM that works pretty well, and allows one to go into a remote Bios machine, setup, boot, install OS... everything!! 
