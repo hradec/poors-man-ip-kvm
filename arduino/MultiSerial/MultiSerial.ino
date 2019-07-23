@@ -39,8 +39,8 @@ void loop() {
    char inChar = Serial.read();
    flag1 = 0;
    flag2 = 0;
-   Serial.print(inChar, HEX);
-   Serial.write("\n\r");
+//   Serial.print(inChar, HEX);
+//   Serial.write("\n\r");
    Serial1.write(inChar);
   }
 }
