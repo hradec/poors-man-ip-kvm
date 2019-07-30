@@ -132,8 +132,8 @@ void loop() {
                 Serial1.write("buf[cbuf-2]==0x31\n\r");
                 switch (buf[cbuf - 1]) {
                   case 0x35:
-                    Serial1.write("key F5\n\r");
-                    BootKeyboard.write(KEY_F5); break;
+                    Serial1.write("key F2\n\r");
+                    BootKeyboard.write(KEY_F2); break;
                   case 0x37:
                     Serial1.write("key F6\n\r");
                     BootKeyboard.write(KEY_F6); break;
