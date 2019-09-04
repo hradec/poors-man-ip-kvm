@@ -76,6 +76,8 @@ void loop() {
     // ====================================================================
     Serial1.print(inChar, HEX);
     Serial1.write("\n\r" );
+
+    // deal with scape sequences
     if( inChar == 0x1B ){
       // detect a escape sequence
       Serial1.write("flag1\n\r" );
@@ -105,6 +107,15 @@ void loop() {
         for(x=0;x<10;x++) buf[x]=0;cbuf=0;
     }else
 
+    // ====================================================================
+    // F1 ( shift + `  or ~ ) - special case workaround for F1
+    // ====================================================================
+    if ( buf[0] == 0x7E  ){
+        Serial1.write("key F1\n\r");
+        BootKeyboard.write(KEY_F1); 
+        for(x=0;x<10;x++) buf[x]=0;cbuf=0;
+    }else
+    
     // ====================================================================
     // power on via keyboard - crtl+alt+p 
     // ====================================================================
