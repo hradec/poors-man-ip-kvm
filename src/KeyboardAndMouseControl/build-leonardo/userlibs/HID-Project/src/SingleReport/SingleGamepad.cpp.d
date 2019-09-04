@@ -1,21 +1,21 @@
 build-leonardo/userlibs/HID-Project/src/SingleReport/SingleGamepad.cpp.o: \
- /root/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/SingleGamepad.cpp \
- /root/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/SingleGamepad.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Arduino.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/binary.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WCharacter.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WString.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Stream.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Print.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Printable.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBAPI.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Arduino.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBDesc.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBCore.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/variants/leonardo/pins_arduino.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/libraries/HID/src/HID.h \
- /root/poors-man-ip-kvm/arduino-1.8.9/hardware/arduino/avr/cores/arduino/PluggableUSB.h \
- /root/poors-man-ip-kvm/libraries/HID-Project/src/HID-Settings.h \
- /root/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/../HID-APIs/GamepadAPI.h \
- /root/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/../HID-APIs/GamepadAPI.hpp
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/SingleGamepad.cpp \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/SingleGamepad.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/Arduino.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/binary.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/WCharacter.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/WString.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/HardwareSerial.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/Stream.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/Print.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/Printable.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/USBAPI.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/Arduino.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/USBDesc.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/USBCore.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/variants/leonardo/pins_arduino.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/libraries/HID/src/HID.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/arduino-1.8.9/hardware/archlinux-arduino/avr/cores/arduino/PluggableUSB.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/libraries/HID-Project/src/HID-Settings.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/../HID-APIs/GamepadAPI.h \
+ /RAID/atomo/home/rhradec/dev/poors-man-ip-kvm/libraries/HID-Project/src/SingleReport/../HID-APIs/GamepadAPI.hpp

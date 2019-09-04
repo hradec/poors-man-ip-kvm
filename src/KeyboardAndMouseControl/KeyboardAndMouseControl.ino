@@ -278,40 +278,48 @@ void loop() {
         // if we're not in a escape sequence, just send the chars to keyboard
         // ====================================================================
         if ( cbuf == 0 ) {
-            if ( inChar == 0x0D )
+            if ( inChar == 0x0D ) {
                 BootKeyboard.write(KEY_ENTER);
-            else if ( inChar == 0x60 )
+                Serial1.write("key ctrl + ");
+            } else if ( inChar == 0x60 ) {
                 BootKeyboard.write(KEY_ESC);
-            else if ( inChar == 0x03 ) {
+                Serial1.write("key esc\n");
+            } else if ( inChar == 0x03 ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('c');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + c");
             } else if ( inChar == 0x18 ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('x');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + x");
             } else if ( inChar == 0x1A ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('z');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + z");
             } else if ( inChar == 0x0F ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('o');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + o");
             } else if ( inChar == 0x01 ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('a');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + a");
             } else if ( inChar == 0x05 ) {
                 BootKeyboard.press(KEY_LEFT_CTRL);
                 BootKeyboard.press('e');
                 delay(100);
                 BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + e");
             } else
                 BootKeyboard.write( inChar );
             for (x = 0; x < 10; x++) buf[x] = 0;
