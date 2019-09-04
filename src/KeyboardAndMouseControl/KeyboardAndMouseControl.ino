@@ -84,15 +84,17 @@ void loop() {
       cbuf = 0;
       buf[cbuf++] = inChar;
     } else
-      // now that we have a escape sequence,
-      // start pulling it into a buffer
-      if ( cbuf > 0 ) {
+    // now that we have a escape sequence,
+    // start pulling it into a buffer
+    if ( cbuf > 0 ) {
         // store sequence
         if ( cbuf > 0 ) {
           Serial1.write("flagN\n\r" );
           buf[cbuf++] = inChar;
         }
-      }
+    }else{
+	cbuf=0;
+    }
 
     // ====================================================================
     // crtl+alt+del
@@ -108,9 +110,9 @@ void loop() {
     } else
 
     // ====================================================================
-    // F1 ( shift + `  or ~ ) - special case workaround for F1
+    // F1 ( shift + 1  or ! ) - special case workaround for F1
     // ====================================================================
-    if ( buf[0] == 0x7E  ){
+    if ( inChar == 0x21  ){
         Serial1.write("key F1\n\r");
         BootKeyboard.write(KEY_F1); 
         for(x=0;x<10;x++) buf[x]=0;cbuf=0;
@@ -125,7 +127,7 @@ void loop() {
         Keyboard.write(KEY_POWER);
         Keyboard.wakeupHost();
         for (x = 0; x < 10; x++) buf[x] = 0; cbuf = 0;
-      } else
+     } else
 
         // ====================================================================
         // We try to detect if this is the end of the escape sequence
