@@ -320,6 +320,11 @@ void loop() {
                 delay(100);
                 BootKeyboard.releaseAll();
                 Serial1.write("key ctrl + e\n");
+            } else if ( inChar == 0x05 ) {
+                BootKeyboard.press(KEY_TAB);
+                delay(100);
+                BootKeyboard.releaseAll();
+                Serial1.write("key ctrl + e\n");
             } else
                 BootKeyboard.write( inChar );
             for (x = 0; x < 10; x++) buf[x] = 0;
