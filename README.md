@@ -69,7 +69,7 @@ After that, you just have to upload the "multiserial" code to the one you're goi
 
 I only use Linux , so in the controlling computer I connect to the controlling arduino using "sudo screen /dev/ttyACM0", and after that, everything I type goes to the controlled computer as keyboard keystrokes (almost everything... I didn't add all the crtl+key combinations yet, neither F1 to F5 - actually, F5 is F2, and shift+1 is F1 for now - you can see all that in the "KeyboardAndMouseControl" code)
 
-I also open the video capture on the controlling computer using VLC, so I can see what's the video board is displaying. 
+I also open the video capture on the controlling computer using VLC, so I can see what's the video board of the controlled computer is displaying. 
 
 thats pretty much it. 
 
