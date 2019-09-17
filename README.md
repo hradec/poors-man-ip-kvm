@@ -59,9 +59,10 @@ https://www.aliexpress.com/item/1804917596.html?spm=a2g0o.productlist.0.0.59fc79
 
 you have to solder the TX/RX between then in a crossover setup: 
 
-TX->RX
 
-RX->TX
+    - TX->RX
+
+    - RX->TX
 
 So they can communicate over they own hardware serial port.
 
