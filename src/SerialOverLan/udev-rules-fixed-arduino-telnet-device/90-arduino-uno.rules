@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ATTRS{serial}=="641313833313519152A0", SYMLINK+="arduino-telnet-0"
+#KERNEL=="ttyACM*", NAME="arduino-0"
