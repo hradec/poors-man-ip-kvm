@@ -7,6 +7,9 @@
 #
 # SPDX-License-Identifier:    BSD-3-Clause
 
+import sys, os
+sys.path.insert(0, "%s/../python/" % os.path.dirname( os.path.abspath( __file__ ) ) )
+
 import codecs
 import os
 import sys
