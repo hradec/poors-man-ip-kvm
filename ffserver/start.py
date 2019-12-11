@@ -7,25 +7,46 @@
 # ffserver can be download statically built from this addess (nov/2019
 # https://github.com/vot/ffbinaries-prebuilt/releases/download/v3.4/ffserver-3.4-linux-64.zip
 
-import os
+import os, sys
 import shlex, subprocess
+import signal
+import sys
 
 PORT=8090
 
 CD = os.path.dirname( os.path.abspath( __file__ ) )
 
-ffserver_cmd = '%s/ffserver -f %s/ffserver.conf  > /tmp/ffserver.log 2>&1' % (CD, CD)
-ff_cmd = '%s/ffmpeg-bin/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i /dev/video0 http://localhost:%s/camera.ffm  > /tmp/ffserver.log 2>&1' % (CD, PORT)
+v='/dev/video0'
+if len(sys.argv)>1:
+	v = sys.argv[1]
 
-ffserver = subprocess.Popen( ffserver_cmd.split(' '), bufsize=4096 ) #, shell=True )
-ffmpeg = subprocess.Popen( ff_cmd.split(' '), bufsize=4096 ) #, shell=True )
+ffserver_cmd = '%s/ffserver -f %s/ffserver.conf ' % (CD, CD)
+#ff_cmd = '%s/ffmpeg-bin/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i %s http://localhost:%s/camera.ffm' % (CD, v, PORT)
+ff_cmd = '%s/debian/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i %s http://localhost:%s/camera.ffm' % (CD,v, PORT)
 
+print ffserver_cmd
+print ff_cmd
+
+ffserver = subprocess.Popen( ffserver_cmd, shell=True )
+
+os.environ['LD_LIBRARY_PATH'] = "%s/debian" % CD
+ffmpeg = subprocess.Popen( ff_cmd, shell=True )
+
+
+def signal_handler(signal, frame):
+  ffserver.kill()
+  ffmpeg.kill()
+  sys.exit(-1)
+
+signal.signal(signal.SIGINT, signal_handler)
 ffmpeg.wait()
+
+
 
 while True:
 	ffserver.poll()
 	ffmpeg.poll()
-	print ffserver.returncode, ffmpeg.returncode
+#	print ffserver.returncode, ffmpeg.returncode
 
 	if ffserver.returncode < 0:
 		break
