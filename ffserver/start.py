@@ -25,7 +25,8 @@ if len(sys.argv)>1:
 
 ffserver_cmd = '%s/ffserver -f %s/ffserver.conf ' % (CD, CD)
 #ff_cmd = '%s/ffmpeg-bin/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i %s http://localhost:%s/camera.ffm' % (CD, v, PORT)
-ff_cmd = '%s/debian/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i %s http://localhost:%s/camera.ffm' % (CD,v, PORT)
+ff_cmd = "LD_PRELOAD=$(ldconfig -p | grep libc.so.6 | awk '{print $NF}' | grep -v 32):$(ldconfig -p | grep libpthread.so.0 | awk '{print $NF}' | grep -v 32) "+\
+	 '%s/debian/ffmpeg -f video4linux2  -standard PAL  -s 720x560 -r 30 -i %s http://localhost:%s/camera.ffm' % (CD,v, PORT)
 
 print ffserver_cmd
 print ff_cmd
