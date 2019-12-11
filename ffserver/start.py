@@ -1,5 +1,8 @@
 #!/usr/bin/env python2
 
+# to play, run: ffplay http://<ip address of the machine running this script>:8090/camera.mjpeg
+# ex: ffplay http://192.168.0.10:8090/camera.mjpeg
+
 # ffmpeg can be download statically built from this address (nov/2019)
 # https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
 # or this: https://ffbinaries.com/downloads
