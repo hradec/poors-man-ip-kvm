@@ -1,0 +1,6 @@
+[submodule "ffserver/node"]
+	path = ffserver/node
+	url = https://github.com/nodejs/node
+[submodule "ffserver/serial-web-terminal"]
+	path = ffserver/serial-web-terminal
+	url = https://github.com/billroy/serial-web-terminal.git
