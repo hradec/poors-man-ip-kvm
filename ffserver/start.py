@@ -31,25 +31,29 @@ ff_cmd = "LD_PRELOAD=$(ldconfig -p | grep libc.so.6 | awk '{print $NF}' | grep -
 print ffserver_cmd
 print ff_cmd
 
+## start ffserver
 ffserver = subprocess.Popen( ffserver_cmd, shell=True )
 
+## start ffmpeg
 os.environ['LD_LIBRARY_PATH'] = "%s/debian" % CD
 ffmpeg = subprocess.Popen( ff_cmd, shell=True )
 
+## start nc to pipe ffserver to the xinetd port
+nc=subprocess.Popen( "nc 127.0.0.1 %s" % str(PORT), shell=True )
 
 def signal_handler(signal, frame):
   ffserver.kill()
   ffmpeg.kill()
+  nc.kill()
   sys.exit(-1)
 
 signal.signal(signal.SIGINT, signal_handler)
 ffmpeg.wait()
 
-
-
 while True:
 	ffserver.poll()
 	ffmpeg.poll()
+        nc.poll()
 #	print ffserver.returncode, ffmpeg.returncode
 
 	if ffserver.returncode < 0:
@@ -61,3 +65,4 @@ while True:
 
 ffserver.kill()
 ffmpeg.kill()
+nc.kill()
