@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
-# to play, run: ffplay http://<ip address of the machine running this script>:8090/camera.mjpeg
-# ex: ffplay http://192.168.0.10:8090/camera.mjpeg
+# to play, run: ffplay http://<ip address of the machine running this script>:8089/camera.mjpeg
+# ex: ffplay http://192.168.0.10:8089/camera.mjpeg
 
 # ffmpeg can be download statically built from this address (nov/2019)
 # https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
@@ -15,7 +15,7 @@ import shlex, subprocess
 import signal
 import sys
 
-PORT=8090
+PORT=8089
 
 CD = os.path.dirname( os.path.abspath( __file__ ) )
 
